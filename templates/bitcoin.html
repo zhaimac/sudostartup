@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                <button id="GetPrice" class="btn btn-default">Get Current Prices</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-group" id="Results">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{{ url_for('static', filename = 'bitcoin.js') }}"></script>
+{% endblock %}
