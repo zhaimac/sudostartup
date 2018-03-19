@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <title>Weather Application</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Mo's Startup</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="{{url_for('weather')}}">Home</a>
+        <a class="p-2 text-dark" href="{{url_for('weather')}}">Weather</a>
+        <a class="p-2 text-dark" href="{{url_for('bitcoin')}}">BitCoin</a>
+        <!--<a class="p-2 text-dark" href="#">Pricing</a>-->
+      </nav>
+      <a class="btn btn-outline-primary" href="#">Sign up</a>
+      <a class="btn btn-outline-primary" href="#">Login</a>
+
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    {% block js %}{% endblock %}
+</body>
+</html>
