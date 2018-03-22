@@ -19,46 +19,45 @@ $(document).ready(function () {
 
         $.getJSON(url2, handleBitcoinResponse);
     };
+
     $("#BitCoinButton").click(bitconButtonClicked);
 
 
     function renderChart(bpi) {
-    console.log(bpi.keys)
-
-    Highcharts.chart('container', {
-        chart: {
-            type: 'line'
-        },
-        title: {
-            text: '30 days Bitcoin Average Price'
-        },
-        subtitle: {
-            text: 'Source: butaire.com'
-        },
-        xAxis: {
-            categories: Object.keys(bpi)
-        },
-        yAxis: {
+        Highcharts.chart('container', {
+            chart: {
+                type: 'line'
+            },
             title: {
-                text: 'Price in USD'
-            }
-        },
-        plotOptions: {
-            line: {
-                dataLabels: {
-                    enabled: true
-                },
-                enableMouseTracking: true
-            }
-        },
-        series: [{
-            name: 'Btcoin',
-            data: Object.values(bpi)
-        }, {
-            name: 'Baseine',
-            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-        }]
-    });
+                text: '30 days Bitcoin Average Price'
+            },
+            subtitle: {
+                text: 'Source: butaire.com'
+            },
+            xAxis: {
+                categories: Object.keys(bpi)
+            },
+            yAxis: {
+                title: {
+                    text: 'Price in USD'
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true
+                    },
+                    enableMouseTracking: true
+                }
+            },
+            series: [{
+                name: 'Btcoin',
+                data: Object.values(bpi)
+            }, {
+                name: 'Baseline',
+                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            }]
+        });
     }
 
 })
